@@ -1,7 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { CgBoy } from 'react-icons/cg';
+import { IconContext } from 'react-icons/lib';
+
 import { Button } from '../utilities/Button';
 import './Navbar.css'
 
@@ -20,13 +23,19 @@ function Navbar() {
         }
     }
 
+    useEffect(() => {
+        showButton();
+
+    },[])
+
     // Khi resize sẽ gọi hàm showButton
     window.addEventListener('resize',showButton);
 
     return (
+        <IconContext.Provider value={{color:'#fff'}} >
         <div className="navbar">
             <div class="navbar-container container">
-                 <Link to="/" className="navbar-logo">
+                 <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
                      <CgBoy className="navbar-icon"></CgBoy>
                      SOUTHXZX
                  </Link>
@@ -35,17 +44,17 @@ function Navbar() {
                  </div>
                  <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                      <li className="nav-item">
-                         <Link to="/" className="nav-link">
+                         <Link onClick={closeMobileMenu} to="/" className="nav-link">
                              Home
                          </Link>
                      </li>
                      <li className="nav-item">
-                         <Link to="/services" className="nav-link">
+                         <Link onClick={closeMobileMenu} to="/services" className="nav-link">
                              Services
                          </Link>
                      </li>
                      <li className="nav-item">
-                         <Link to="/ptoducts" className="nav-link">
+                         <Link onClick={closeMobileMenu} to="/ptoducts" className="nav-link">
                              Product
                          </Link>
                      </li>
@@ -55,7 +64,7 @@ function Navbar() {
                              <Button buttonStyle='btn--outline'>SIGN UP</Button>
                              </Link>
                          ) : (
-                            <Link to='/sign-up' className="btn-link"> 
+                            <Link onClick={closeMobileMenu}  to='/sign-up' className="btn-link"> 
                             <Button buttonStyle='btn--outline' buttonSize='btn--mobile'>SIGN UP</Button>
                             </Link>
                          )}
@@ -63,6 +72,7 @@ function Navbar() {
                  </ul>
             </div>
         </div>
+        </IconContext.Provider>
     )
 }
 

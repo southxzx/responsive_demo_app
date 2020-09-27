@@ -10,18 +10,27 @@
     cursor: pointer;
     white-space: nowrap;
 }
+.btn-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 8px 16px;
+    height: 100%;
+    width: 100%;
+  }
 /* //STYLES */
 .btn--primary{
     background-color: var(--primary);
     color: #242424;
-    border: 1px solid var (var(--primary));
+    border: 1px solid var(--primary);
 }
 
 .btn--outline{
     background-color: transparent;
     color: white;
     padding: 8px 20px;
-    border: 1px solid var (var(--primary));
+    border: 1px solid var(--primary);
     transition: all 0.3s ease-out;
 }
 

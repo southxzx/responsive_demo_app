@@ -37,7 +37,7 @@ function Navbar() {
             <div class="navbar-container container">
                  <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
                      <CgBoy className="navbar-icon"></CgBoy>
-                     SOUTHXZX
+                     MR. P
                  </Link>
                  <div className="menu-icon" onClick={handleClick}>  
                  {click ? <FaTimes/> : <FaBars/>}
@@ -54,7 +54,7 @@ function Navbar() {
                          </Link>
                      </li>
                      <li className="nav-item">
-                         <Link onClick={closeMobileMenu} to="/ptoducts" className="nav-link">
+                         <Link onClick={closeMobileMenu} to="/products" className="nav-link">
                              Product
                          </Link>
                      </li>

@@ -2,12 +2,12 @@ export const homeObjOne = {
     lightBg: false,
     lightText: true,
     lightTextDesc: true,
-    topLine: 'nHÌN Quần Què',
-    headLine: '3V3 AND BATTLE ROYALE',
-    description: `Time to BRAWL! Team up with your friends and get ready for epic multiplayer MAYHEM! Brawl Stars is the newest game from the makers of Clash of Clans and Clash Royale. Jump into your favorite game mode and play quick matches with your friends. Shoot 'em up, blow 'em up, punch 'em out and win the BRAWL.`,
+    topLine: 'Exclusive Access',
+    headLine: 'Unliminted Transasctions with zero fees',
+    description: 'Get access to our exclusive diamond card that allows you to send unlimited trans',
     buttonLabel: 'Get Started',
     imgStart: '',
-    img: 'images/colt.png',
+    img: 'images/svg-1.svg',
     alt: 'Credit Card'
 };
 
@@ -21,7 +21,7 @@ export const homeObjTwo = {
       "Get everything set up and ready in under 10 minutes. All you need to do is add your information and you're ready to go.",
     buttonLabel: 'Start Now',
     imgStart: 'start',
-    img: 'images/spike.png',
+    img: 'images/svg-7.svg',
     alt: 'Vault'
   };
 
